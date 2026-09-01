@@ -7,6 +7,29 @@ This project automates the customer support ticket management process using AI a
 When a customer sends an email, the automation captures the incoming message, uses Groq AI to categorize the support issue, creates a structured support ticket in Airtable, notifies the support team through Slack, and sends an acknowledgement email to the customer.
 
 A second automation monitors ticket status changes in Airtable. When a support ticket is marked as **Resolved**, the system automatically sends a resolution email to the customer.
+## Problem Statement
+
+Traditional customer support processes often require support teams to manually review incoming emails, identify the type of issue, create support tickets, notify the appropriate team members, and send acknowledgement messages to customers.
+
+This manual process can lead to:
+
+* Delayed ticket creation
+* Inconsistent issue categorization
+* Missed or delayed team notifications
+* Repetitive manual email responses
+* Lack of a structured ticket tracking process
+* Additional effort when notifying customers after resolution
+
+## Solution
+
+This project uses **Make** and **Groq AI** to automate the customer support workflow from email intake to ticket resolution.
+
+When a customer sends an email, the system automatically processes the message using Groq AI to categorize the issue, creates a structured ticket in Airtable, sends a notification to the support team through Slack, and sends an acknowledgement email to the customer.
+
+A separate workflow monitors Airtable for status changes. When a manager marks a ticket as **Resolved**, the automation detects the change and sends a resolution email to the customer.
+
+This reduces repetitive manual work and creates a consistent workflow for handling customer support requests from **initial enquiry through resolution**.
+
 
 ### Workflow
 
