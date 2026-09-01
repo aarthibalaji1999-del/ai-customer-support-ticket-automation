@@ -80,6 +80,29 @@ Gmail - Send Resolution Email
 ### Tech Stack
 
 * **Make** - Workflow automation platform
+* ## Key Features
+
+* **AI-Powered Issue Categorization**
+  Uses Groq AI to analyze incoming customer emails and categorize support issues automatically.
+
+* **Automated Ticket Creation**
+  Creates a structured support ticket in Airtable from the incoming customer email.
+
+* **Real-Time Support Team Notification**
+  Sends a Slack notification to the support team when a new ticket is created.
+
+* **Automated Customer Acknowledgement**
+  Sends an acknowledgement email to the customer after the support ticket is created.
+
+* **Ticket Status Monitoring**
+  Monitors Airtable records for changes to the support ticket status.
+
+* **Automated Resolution Email**
+  When a manager changes the ticket status to **Resolved**, the system automatically sends a resolution email to the customer.
+
+* **Two-Scenario Automation Architecture**
+  Separates ticket creation and resolution handling into two independent Make scenarios for easier management and maintenance.
+
 * **Gmail** - Customer email processing and notifications
 * **Groq AI** - AI-powered support issue categorization
 * **Airtable** - Support ticket database and status tracking
