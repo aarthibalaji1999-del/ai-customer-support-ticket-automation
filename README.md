@@ -105,6 +105,42 @@ Gmail - Send Resolution Email
 
 * **Gmail** - Customer email processing and notifications
 * **Groq AI** - AI-powered support issue categorization
+* ## Testing & Validation
+
+The automation was tested using sample customer support emails and Airtable status updates to validate the complete workflow.
+
+### Scenario 1: Ticket Creation & Acknowledgement
+
+| Test                                  | Expected Result                                    | Status   |
+| ------------------------------------- | -------------------------------------------------- | -------- |
+| Send a sample customer email to Gmail | Email is detected by the workflow                  | ✅ Passed |
+| Process the email with Groq AI        | Support issue is categorized                       | ✅ Passed |
+| Create the Airtable ticket            | Ticket record is created with the required details | ✅ Passed |
+| Send Slack notification               | Support team receives the new ticket notification  | ✅ Passed |
+| Send acknowledgement email            | Customer receives an acknowledgement email         | ✅ Passed |
+
+### Scenario 2: Ticket Resolution
+
+| Test                               | Expected Result                                     | Status   |
+| ---------------------------------- | --------------------------------------------------- | -------- |
+| Update ticket status to `Resolved` | Airtable detects the record update                  | ✅ Passed |
+| Apply `Status = Resolved` filter   | Only resolved tickets continue through the workflow | ✅ Passed |
+| Send resolution email              | Customer receives the resolution email              | ✅ Passed |
+
+### Validation
+
+The workflow was validated by checking:
+
+* Successful email detection from Gmail
+* Correct AI categorization output
+* Successful Airtable record creation
+* Correct Slack notification delivery
+* Successful acknowledgement email delivery
+* Correct detection of the `Resolved` status
+* Successful resolution email delivery
+
+These tests confirmed that both automation scenarios performed their intended actions from **customer enquiry through ticket resolution**.
+
 * **Airtable** - Support ticket database and status tracking
 * **Slack** - Support team notifications
 
